@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<header>
+  
+    <h1>Meus Projetos</h1>
+</header>
+
+<section class="projects">
+    <div class="project-card">
+        <h2>GestorGO</h2>
+        <p>Plataforma inteligente de gestão financeira.</p>
+    </div>
+
+    <div class="project-card">
+        <h2>Vilarinho Tech Academy</h2>
+        <p>Plataforma gamificada para formação em tecnologia.</p>
+    </div>
+
+    <div class="project-card">
+        <h2>Portfólio Profissional</h2>
+        <p>Site institucional com animações modernas.</p>
+    </div>
+</section>
+
+</body>
+
+<a href="Projetos.html" class="btn-projects" onclick="fadeOut(event)">
+    Ver Projetos
+</a>
+
+<script>
+    function fadeOut(event){
+        event.preventDefault();
+        document.body.style.opacity = "0";
+        document.body.style.transition = "0.5s";
+    
+    setTimeout(()=>{
+        window.location.href = event.target.href;
+    },500);
+}
+</script>
+</html>
