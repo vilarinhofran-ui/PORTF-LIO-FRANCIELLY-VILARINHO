@@ -6,8 +6,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
+/* ==========================
+   MENU ATIVO
+========================== */
 const sections = document.querySelectorAll("section");
-
 const navLinks = document.querySelectorAll(".navbar a");
 
 window.addEventListener("scroll", () => {
@@ -16,7 +18,7 @@ window.addEventListener("scroll", () => {
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - 150;
 
-    if (pageYOffset >= sectionTop) {
+    if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
   });
@@ -24,7 +26,7 @@ window.addEventListener("scroll", () => {
   navLinks.forEach((link) => {
     link.classList.remove("active");
 
-    if (link.getAttribute("href") === "#" + current) {
+    if (link.getAttribute("href") === `#${current}`) {
       link.classList.add("active");
     }
   });
@@ -61,7 +63,9 @@ function reveal() {
     }
   });
 }
-
+/* ==========================
+   CARROSSEL DE DEPOIMENTOS
+========================== */
 window.addEventListener("load", () => {
   const cards = document.querySelectorAll(".testimonial-card");
 
@@ -69,21 +73,20 @@ window.addEventListener("load", () => {
 
   let current = 0;
 
-  cards.forEach((card) => {
-    card.classList.remove("active");
-  });
-
+  cards.forEach((card) => card.classList.remove("active"));
   cards[0].classList.add("active");
 
   setInterval(() => {
     cards[current].classList.remove("active");
 
-    current++;
-
-    if (current >= cards.length) {
-      current = 0;
-    }
+    current = (current + 1) % cards.length;
 
     cards[current].classList.add("active");
-  }, 20000); // 15 segundos
+  }, 8000); // troca a cada 8 segundos
 });
+
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("active");
+}
+
+const text = "Analista de Dados & Desenvolvedora";
