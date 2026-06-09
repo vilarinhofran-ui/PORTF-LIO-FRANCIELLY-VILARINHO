@@ -412,9 +412,9 @@ section h2 {
 /* CONTACT */
 
 #contact {
-  background: linear-gradient(140deg, var(--light), #8efffff9);
+  background: linear-gradient(140deg, var(--primary-light), #00fdfd);
 
-  color: rgba(255, 255, 255, 0.942);
+  color: rgb(0, 0, 0);
 
   text-align: center;
 }
