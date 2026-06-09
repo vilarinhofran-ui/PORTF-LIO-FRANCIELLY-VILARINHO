@@ -534,7 +534,9 @@ section h2 {
 
   transition: all 0.45s ease;
 
-  max-width: 700px;
+  flex: 1;
+
+  max-width: 420px;
 }
 
 /* CONTEÚDO */
@@ -1655,6 +1657,7 @@ section h2 {
 /* GRID DOS PROJETOS */
 .grid {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   max-width: 1400px; /* aumenta largura total */
@@ -1664,8 +1667,8 @@ section h2 {
 
 /* CARD */
 .project-card {
-  width: 100%;
-  max-width: none;
+  width: 300px;
+  max-width: 100%;
   background: #1e293b;
   border-radius: 16px;
   overflow: hidden;
