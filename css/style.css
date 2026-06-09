@@ -292,7 +292,7 @@ section h2 {
   width: 100%; /* Ocupa a largura total do container */
 }
 
-/* GRID */
+/* GRID CARDS PROJETPS*/
 
 .grid {
   display: grid;
@@ -339,10 +339,23 @@ section h2 {
   padding-left: 20px;
 }
 
-/* PROJECTS */
+/* GRID */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+/* CARD */
 
 .project {
   display: flex;
+
   flex-direction: column;
 
   background: #0d0c0c;
@@ -351,27 +364,231 @@ section h2 {
 
   padding: 20px;
 
-  min-height: auto;
+  height: 100%;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  border: 1px solid rgba(0, 0, 0, 0.05);
-
-  transition: 0.3s ease;
+  min-height: 520px;
 }
 
-.project:hover {
-  transform: translateY(-8px);
+/* CONTEÚDO */
 
-  box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15);
+.project-content {
+  flex: 1;
 }
 
-.project h3 {
+/* BOTÃO */
+
+.btn-project {
+  margin-top: auto;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 100%;
+
+  height: 50px;
+
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.btn-project:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 20px rgba(0, 198, 255, 0.4);
+}
+
+/* BOTÕES DOS CARDS */
+
+.btn-project,
+.project .btn,
+.card .btn {
+  display: inline-block;
+
+  background: #0d0c0c;
+
+  color: #ffffff;
+
+  padding: 12px 24px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  border: 2px solid transparent;
+
+  transition: all 0.3s ease;
+}
+
+.btn-project:hover,
+.project .btn:hover,
+.card .btn:hover {
+  background: transparent;
+
+  color: #29c7ef;
+
+  border: 2px solid #ffffff;
+
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-card .btn-project {
+  margin-top: auto;
+}
+
+/* ==========================================
+   PROJECTS - EFEITO PREMIUM
+========================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+
+  align-items: stretch;
+
+  overflow: visible;
+}
+
+/* CARD */
+
+.project-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 520px;
+
+  background: #0d0c0c;
+
+  border-radius: 24px;
+
+  padding: 20px;
+
+  transition: all 0.45s ease;
+}
+
+/* CONTEÚDO */
+
+.project-card .content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+/* EFEITO DE FOCO */
+
+.projects-grid:hover .project-card {
+  transform: scale(0.88);
+
+  opacity: 0.45;
+
+  filter: blur(2px);
+}
+
+/* CARD SELECIONADO */
+
+.projects-grid .project-card:hover {
+  transform: scale(1.18);
+
+  opacity: 1;
+
+  filter: blur(0);
+
+  z-index: 999;
+
+  border: 1px solid rgba(0, 198, 255, 0.6);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(0, 198, 255, 0.35);
+}
+
+/* IMAGEM */
+
+.project-card img {
+  width: 100%;
+
+  border-radius: 16px;
+
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* TÍTULO */
+
+.project-card h3 {
+  margin: 20px 0 12px;
+
+  text-align: center;
+
   color: var(--primary);
-
-  margin-bottom: 15px;
 }
 
+/* BOTÃO PADRONIZADO */
+
+.btn-project {
+  margin-top: auto;
+
+  width: 100%;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: #fff;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+
+  transition: all 0.35s ease;
+}
+
+.btn-project:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 198, 255, 0.4),
+    0 0 15px rgba(0, 198, 255, 0.25);
+}
 /* TIMELINE */
 
 .timeline {
