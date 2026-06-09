@@ -510,13 +510,10 @@ section h2 {
 ========================================== */
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-
-  align-items: stretch;
-
-  overflow: visible;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap; /* mantém na mesma linha */
 }
 
 /* CARD */
@@ -536,6 +533,8 @@ section h2 {
   padding: 20px;
 
   transition: all 0.45s ease;
+
+  max-width: 700px;
 }
 
 /* CONTEÚDO */
@@ -1164,7 +1163,7 @@ section + section {
 
 /* CAMPO DE TEXTO MAIOR (RECOMENDAÇÃO) */
 #testimonial-form textarea {
-  min-height: 420px;
+  min-height: 180px;
   max-height: 220px;
   overflow-y: auto;
 }
@@ -1285,7 +1284,7 @@ body {
   align-items: center;
   gap: 20px;
 
-  min-height: 280px;
+  min-height: 180px;
 
   padding: 12px 18px;
 
